@@ -23,7 +23,7 @@ const reviewRoutes=require('./routes/reviews')
 const User=require('./models/user')
 
 mongoose.set('strictQuery',false)//to avoid depriciation warning
-mongoose.connect('mongodb://localhost:27017/yelp-camp',{
+mongoose.connect(process.env.mongourl,{
     useNewUrlParser:true,
     useUnifiedTopology:true,
 })
